@@ -1,5 +1,5 @@
 def is_leap(year):
-    return True
+    return year % 4 == 0
 
 def test_normal_leap_year():
     assert is_leap(1996)
