@@ -1,11 +1,12 @@
 def is_leap(year):
-    if is_atypical_common_year(year):
-        return False
-    return year % 4 == 0
+    return year % 4 == 0 and not is_atypical_common_year(year)
+    
 def is_atypical_common_year(year):
       return year % 100 == 0 and not year % 400 == 0
+      
 def test_normal_leap_year():
     assert is_leap(1996)
+    
 def test_normal_common_year():
      assert not is_leap(2001)
      
