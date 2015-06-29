@@ -10,3 +10,6 @@ def test_normal_common_year():
      
 def test_atypical_common_year():
      assert not is_leap(1900)
+
+def test_atypical_leap_year():
+     assert is_leap(2000)
